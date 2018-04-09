@@ -11,7 +11,7 @@ In addition, the is no app-package for GHDL - while I could make one in theory -
 Open up terminal and just follow these steps!
 1. git clone https://github.com/BracketMaster/quick-ghdl-toolchain.git
 2. cd quick-ghdl-toolchain
-3. make install-OSX
+3. make install-OSX - it'll probably ask for your password when install gtk-wave - so pay close attention!
 4. test that ghdl has been properly installed by typing $ghdl - it should respond  - ghdl:error: missing command, try ghdl --help
 5. copy the makefile in the "quick-ghdl-toolchain" directory to wherever you vhdl file are
 6. Once you are ready to simulate - make sure you are in the directory with the vhdl files and just type $make
