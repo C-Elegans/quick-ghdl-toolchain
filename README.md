@@ -1,6 +1,6 @@
 # quick-ghdl-toolchain
 ## Status
-The installer should now work. If you ran the installer before 12:30 April 10, delete the last line added to your ~/.bash_profile.
+The installer should now work. If you ran the installer before 2:10 April 10, delete the last line added to your ~/.bash_profile.
 ## Overview
 This is designed to help 3056 students quickly complete their vhdl simulation projects without wasting valueable tiem with the shortcoming and slowness of Modelsim. This toolchain is based off of GHDL and GTKWave - both venerable open source projects.
 ## Benefits
