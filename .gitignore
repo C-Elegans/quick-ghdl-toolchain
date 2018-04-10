@@ -1,3 +1,4 @@
 #the usual macOS files
 *.DS_Store
 *.swp
+*.app

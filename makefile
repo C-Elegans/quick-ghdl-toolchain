@@ -1,5 +1,6 @@
 TIME=500ns
-GHDL = "/Users/yehowshuaimmanuel/sources/GHDL/bin/ghdl"
+#GHDL = "/Users/yehowshuaimmanuel/sources/GHDL/bin/ghdl"
+GHDL = ghdl
 GHDL_SIM_OPT = --stop-time=$(TIME)
 GHDL_FLAGS = --ieee=synopsys -fexplicit
 WORKDIR = Simulate
@@ -29,8 +30,8 @@ install-OSX :
 	mkdir -p ~/sources
 	tar -xzvf ./GHDL.tar
 	cp -rf ./GHDL ~/sources
-	printf "export PATH=\"~/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
+	printf "export PATH=\"$$(echo ~)/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
 	source ~/.bash_profile
 
 test :
-	printf "export PATH=\"~/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
+	printf "export PATH=\"$$(echo ~)/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
