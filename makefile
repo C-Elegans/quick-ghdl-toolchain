@@ -1,4 +1,5 @@
 TIME=500ns
+GHDL = "/Users/yehowshuaimmanuel/sources/GHDL/bin/ghdl"
 GHDL_SIM_OPT = --stop-time=$(TIME)
 GHDL_FLAGS = --ieee=synopsys -fexplicit
 WORKDIR = Simulate
@@ -10,11 +11,11 @@ all : compile simulate
 
 compile :
 	mkdir -p $(WORKDIR)
-	ghdl -i --workdir=$(WORKDIR) *.vhd
-	ghdl -m $(GHDL_FLAGS) --workdir=$(WORKDIR)/ $(TOP_ENTITY)
+	$(GHDL) -i --workdir=$(WORKDIR) *.vhd
+	$(GHDL) -m $(GHDL_FLAGS) --workdir=$(WORKDIR)/ $(TOP_ENTITY)
 
 simulate :
-	ghdl -r --workdir=$(WORKDIR) $(TOP_ENTITY) --stop-time=$(TIME) --wave=$(TOP_ENTITY).ghw --vcd=$(TOP_ENTITY).vcd
+	$(GHDL) -r --workdir=$(WORKDIR) $(TOP_ENTITY) --stop-time=$(TIME) --wave=$(TOP_ENTITY).ghw --vcd=$(TOP_ENTITY).vcd
 
 clean :
 	rm -rf Simulate
