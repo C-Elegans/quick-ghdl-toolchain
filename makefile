@@ -3,6 +3,7 @@ GHDL_SIM_OPT = --stop-time=$(TIME)
 GHDL_FLAGS = --ieee=synopsys -fexplicit
 WORKDIR = Simulate
 TOP_ENTITY = spim_pipe
+echoPath = .bash_profile
 
 .PHONY : all compile simulate
 all : compile simulate
@@ -26,6 +27,9 @@ install-OSX :
 	sudo cp -rf ./gtkwave.app /Applications/
 	mkdir -p ~/sources
 	tar -xzvf ./GHDL.tar
-	cp -rf ./GHDL/ ~/sources
-	echo PATH=~/sources/GHDL/bin/:$PATH >> ~/.bash_profile
+	cp -rf ./GHDL ~/sources
+	printf "export PATH=\"~/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
 	source ~/.bash_profile
+
+test :
+	printf "export PATH=\"~/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
