@@ -1,5 +1,4 @@
 TIME=500ns
-#GHDL = "/Users/yehowshuaimmanuel/sources/GHDL/bin/ghdl"
 GHDL = ghdl
 GHDL_SIM_OPT = --stop-time=$(TIME)
 GHDL_FLAGS = --ieee=synopsys -fexplicit
