@@ -24,13 +24,7 @@ clean :
 	rm -f e~$(TOP_ENTITY).o
 
 install-OSX :
-	tar -xzvf ./gtkwave.app.tar
-	sudo cp -rf ./gtkwave.app /Applications/
-	mkdir -p ~/sources
-	tar -xzvf ./GHDL.tar
-	cp -rf ./GHDL ~/sources
-	printf "export PATH=\"$$(echo ~)/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
-	source ~/.bash_profile
+	./install.sh
 
 test :
-	printf "export PATH=\"$$(echo ~)/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
+	printf "export PATH=\"~/sources/GHDL/bin/:\$${PATH}\"\n" >> ~/$(echoPath)
